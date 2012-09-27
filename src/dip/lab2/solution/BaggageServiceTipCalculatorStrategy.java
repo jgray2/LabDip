@@ -1,4 +1,6 @@
-package dip.lab2;
+ package dip.lab2.solution;
+
+import dip.lab2.*;
 
 /**
  * An example low-level class. Does this class definition follow the DIP?
@@ -8,7 +10,7 @@ package dip.lab2;
  *
  * @author your name goes here
  */
-public class BaggageServiceTipCalculator {
+public class BaggageServiceTipCalculatorStrategy implements TipCalculatorStrategy {
     private static final double MIN_BILL = 0.00;
     private static final double MAX_BILL = 100.00;
     private static final String BILL_ENTRY_ERR =
@@ -20,19 +22,20 @@ public class BaggageServiceTipCalculator {
 
     private double baseTipPerBag;
     private int bagCount;
+    
     public enum ServiceQuality {
         GOOD, FAIR, POOR
     }
     private ServiceQuality serviceQuality;
 
-    public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
+    public BaggageServiceTipCalculatorStrategy(ServiceQuality q, int bags) {
         this.setServiceRating(q); // perform validation
         this.setBagCount(bags);
 
         baseTipPerBag = 1.00; // set default value
     }
 
-    public double getTipForBaggeHandler() {
+    public double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
