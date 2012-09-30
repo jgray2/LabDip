@@ -1,7 +1,8 @@
 package dip.lab2.solution;
 
 // An useful import if you need it.
-import dip.lab2.*;
+//import dip.lab2.solution.BaggageServiceTipCalculator.ServiceQuality;
+import dip.lab2.solution.BaggageServiceTipCalculatorStrategy.ServiceQuality;
 import java.text.NumberFormat;
 // Another useful import if you need it.
 import javax.swing.JOptionPane;
@@ -20,18 +21,14 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  */
 public class Startup {
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
+   
  
     public static void main(String[] args) {
         
-        TipService tipService = new TipService(new FoodServiceTipCalculatorStrategy(.ServiceQuality.FAIR,5));
-               
-        BaggageServiceTipCalculator service =
-                new BaggageServiceTipCalculator(
-                BaggageServiceTipCalculator.ServiceQuality.FAIR,5);
+   
         
+        TipService tipService = new TipService(new BaggageServiceTipCalculatorStrategy(ServiceQuality.GOOD,5));
+                      
         
         
     }

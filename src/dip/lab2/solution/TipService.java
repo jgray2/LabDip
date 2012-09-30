@@ -6,9 +6,8 @@ public class TipService {
 
     private TipCalculatorStrategy tipCalculator;
 
-    
-    public void tipService(TipCalculatorStrategy tipCalculator){
+    public TipService(TipCalculatorStrategy tipCalculator) {
         this.tipCalculator = tipCalculator;
     }
-    
+
  }
