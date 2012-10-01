@@ -8,7 +8,7 @@ package dip.lab3;
 public class Startup {
     public static void main(String[] args) {
        
-        MessageService message = new MessageService(new WelcomeMessageStrategy(), 
+        MessageService message = new MessageService(new WelcomeMessageStrategy(""), 
                 new guiRendererStrategy());
         
         message.sendMessage();

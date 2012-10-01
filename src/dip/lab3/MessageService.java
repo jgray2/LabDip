@@ -15,8 +15,8 @@ public class MessageService {
     }
     
     public void sendMessage() {
-        message.createMessage(message.toString());
-        renderer.outputData(message.toString());
+        String messageOut = message.createMessage();
+        renderer.outputData(messageOut);
         
     }
     

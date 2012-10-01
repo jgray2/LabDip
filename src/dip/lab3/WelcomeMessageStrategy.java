@@ -8,10 +8,13 @@ public class WelcomeMessageStrategy implements MessageTypeStrategy {
 
     String welcome = "Welcome";
 
-    public final String createMessage(String message) {
+    public final String createMessage() {
         // validation
-        return message = welcome;
+        String message = welcome;
+        return message;
     }
 
-    
+    public WelcomeMessageStrategy(String message) {
+        this.createMessage();
+    }
 }
