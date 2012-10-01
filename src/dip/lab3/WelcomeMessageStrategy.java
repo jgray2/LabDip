@@ -1,4 +1,3 @@
-
 package dip.lab3;
 
 /**
@@ -7,8 +6,12 @@ package dip.lab3;
  */
 public class WelcomeMessageStrategy implements MessageTypeStrategy {
 
-    public String createMessage() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    String welcome = "Welcome";
+
+    public final String createMessage(String message) {
+        // validation
+        return message = welcome;
     }
+
     
 }

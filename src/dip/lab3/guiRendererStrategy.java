@@ -1,8 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dip.lab3;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -10,8 +9,9 @@ package dip.lab3;
  */
 public class guiRendererStrategy implements RendererStrategy {
 
-    public void outputData(String output) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public final void outputData(String output) {
+       JOptionPane.showMessageDialog(null,output);
     }
+
     
 }

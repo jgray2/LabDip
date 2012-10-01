@@ -7,8 +7,12 @@ package dip.lab3;
  */
 public class consoleRendererStrategy implements RendererStrategy {
 
-    public void outputData(String output) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public final void outputData(String output) {
+        System.out.println(output);
+    }
+
+    public consoleRendererStrategy(String output) {
+        this.outputData(output);
     }
     
 }

@@ -7,6 +7,6 @@ package dip.lab3;
  */
 public interface MessageTypeStrategy {
     
-    public abstract String createMessage();
+    public abstract String createMessage(String message);
     
 }
