@@ -22,14 +22,15 @@ import javax.swing.JOptionPane;
  */
 public class Startup {
    
+ 
     public static void main(String[] args) {
-       // create the two types of tip objects & then put one into the tipService
-       // make sure you use polymorphism...TipCalculatorStrategy calc = new...
         
-        TipService tipService = new TipService(new 
-                BaggageServiceTipCalculatorStrategy(ServiceQuality.GOOD,5));
+   
+        
+        TipService tipService = new TipService(new BaggageServiceTipCalculatorStrategy(ServiceQuality.GOOD,5));
                       
-        double tip = tipService.getTheTip();
-        System.out.println("The tip is " + tip);
+        
+        
     }
+
 }
