@@ -9,5 +9,11 @@ public class TipService {
     public TipService(TipCalculatorStrategy tipCalculator) {
         this.tipCalculator = tipCalculator;
     }
+    
+    public double getTheTip() {
+        return tipCalculator.getTip();
+    }
+    
+    //or can create getters & setters
 
  }

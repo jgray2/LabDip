@@ -14,16 +14,18 @@ public class FoodServiceTipCalculatorStrategy implements TipCalculatorStrategy {
     private static final double MIN_BILL = 0.00;
     private static final String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
+    private final double GOOD_RATE = 0.20;
+    private final double FAIR_RATE = 0.15;
+    private final double POOR_RATE = 0.10;
 
     private double bill;
-
-    
+   
     public enum ServiceQuality {
         GOOD, FAIR, POOR
     }
+    //if you put into interface then all instances of ServiceQuality must be
+    //TipCalculatorStrategy.ServiceQuality q
+    
     private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculatorStrategy(ServiceQuality q, double billAmt) {
@@ -31,7 +33,7 @@ public class FoodServiceTipCalculatorStrategy implements TipCalculatorStrategy {
         this.setBill(billAmt);
     }
 
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {

@@ -14,9 +14,9 @@ public class BaggageServiceTipCalculatorStrategy implements TipCalculatorStrateg
     private static final String BILL_ENTRY_ERR =
             "Error: bill must be between " + MIN_BILL + " and "
             + MAX_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
+    private final double GOOD_RATE = 0.20;
+    private final double FAIR_RATE = 0.15;
+    private final double POOR_RATE = 0.10;
 
     private double baseTipPerBag;
     private int bagCount;
@@ -34,7 +34,7 @@ public class BaggageServiceTipCalculatorStrategy implements TipCalculatorStrateg
         baseTipPerBag = 1.00; // set default value
     }
 
-    public double getTip() {
+    public final double getTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -77,7 +77,7 @@ public class BaggageServiceTipCalculatorStrategy implements TipCalculatorStrateg
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");
